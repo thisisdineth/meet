@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCICTS Meeting</title>
+  <style>
+    /* Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Background */
+    body {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    /* Container */
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Logos */
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .logos img {
+      max-width: 80px;
+      height: auto;
+    }
+
+    /* Title */
+    h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+      color: #f5b041;
+    }
+
+    h1 span {
+      color: #ffd700; /* Highlight color */
+    }
+
+    /* Meeting Details */
+    .details {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .details p {
+      margin: 5px 0;
+      font-size: 30px;
+    }
+
+    /* Button */
+    .join-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: transparent;
+      border: 2px solid #4186f5;
+      color: #41aaf5;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 50px;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .join-btn img {
+      max-width: 20px;
+      height: auto;
+    }
+
+    /* Button Hover */
+    .join-btn:hover {
+      background-color: #41b0f5;
+      color: #16213e;
+      box-shadow: 0 8px 20px rgba(65, 173, 245, 0.8);
+      transform: scale(1.1);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .details p {
+        font-size: 1rem;
+      }
+
+      .join-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
+
+      .logos img {
+        max-width: 60px;
+      }
+
+      .join-btn img {
+        max-width: 18px;
+      }
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logos -->
+    <div class="logos">
+      <img src="./img/logo.png" alt="School">
+      <img src="./img/club.png" alt="Club">
+    </div>
+
+    <!-- Title -->
+    <h1>Let's talk about <span>MCICTS ALL</span> together.</h1>
+
+    <!-- Meeting Details -->
+    <div class="details">
+      <p>Meeting for All mcicts Members</p>
+      <p>Date: 26 November (Next Tuesday)</p>
+      <p>Time: 8.00 P.M Onward</p>
+    </div>
+
+    <!-- Button -->
+    <a href="#" class="join-btn">
+      <img src="./img/zoom.png" alt="Zoom Logo"> Join Now
+    </a>
+  </div>
+
+  <script>
+    // Button hover animation effect
+    const button = document.querySelector('.join-btn');
+    button.addEventListener('mouseover', () => {
+      button.style.animation = 'pulse 1s infinite';
+    });
+    button.addEventListener('mouseout', () => {
+      button.style.animation = '';
+    });
+
+    // Keyframes for pulse animation
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Add click event for Join Now
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Redirecting to the meeting link...');
+    });
+  </script>
+</body>
+</html>
