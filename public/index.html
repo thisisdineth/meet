@@ -184,11 +184,11 @@
     `;
     document.head.appendChild(style);
 
-    // Add click event for Join Now
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Redirecting to the meeting link...');
-    });
+// Add click event for Join Now
+button.addEventListener('click', (e) => {
+  e.preventDefault(); // Prevents the default behavior of the button
+  window.location.href = 'https://us06web.zoom.us/j/84169923284?pwd=OFcnxmBpwLDxzHbM3EXTqDYUl5L1C4.1'; // Redirects to the specified link
+});
   </script>
 </body>
 </html>
